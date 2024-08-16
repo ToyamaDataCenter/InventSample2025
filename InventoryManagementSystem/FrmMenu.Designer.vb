@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmMenu
+Partial Class FrmMenu
     Inherits System.Windows.Forms.Form
 
     'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
@@ -63,7 +63,7 @@ Partial Class frmMenu
         Button3.Text = "終了"
         Button3.UseVisualStyleBackColor = False
         ' 
-        ' frmMenu
+        ' FrmMenu
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -73,7 +73,7 @@ Partial Class frmMenu
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Button1)
-        Name = "frmMenu"
+        Name = "FrmMenu"
         Text = "在庫管理システムーメニュー"
         ResumeLayout(False)
     End Sub

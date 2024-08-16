@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.Text
 
-Public Class frmInventoryInput
+Public Class FrmInventoryInput
 
     ''' <summary>
     ''' 追加済データの登録／未登録
@@ -16,7 +16,7 @@ Public Class frmInventoryInput
     ''' <summary>
     ''' 在庫データ接続クラス
     ''' </summary>
-    Private fpInventoryAdapter As New clsInventoryAdapter
+    Private fpInventoryAdapter As New ClsInventoryAdapter
 
 
     ''' <summary>
@@ -24,7 +24,7 @@ Public Class frmInventoryInput
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub frmInventoryInput_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmInventoryInput_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' 画面全体のデータをクリア
         Me.ClearInput(True)
 
@@ -33,7 +33,7 @@ Public Class frmInventoryInput
         Me.fpInventoryDataTable = fpInventoryAdapter.FillInventoryLog()
 
         ' 在庫履歴データをとデータグリッドビューへ結びつける
-        Me.dgvInventory.DataSource = Me.fpInventoryDataTable
+        Me.DgvInventory.DataSource = Me.fpInventoryDataTable
 
 
     End Sub
@@ -43,7 +43,7 @@ Public Class frmInventoryInput
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub frmInventoryInput_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub FrmInventoryInput_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 
     End Sub
 
@@ -52,23 +52,23 @@ Public Class frmInventoryInput
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
         '' 入力中のデータがグリッドへ追加可能か確認
         If (Me.ValidateData() = False) Then
-            Me.txtTantou.Focus()
+            Me.TxtTantou.Focus()
             Return
         End If
 
         '' 入力中のデータを行データとしてまとめる
         Dim wNewRow As DataRow = fpInventoryDataTable.NewRow()
-        wNewRow.Item("SyoriKubun") = {"1", "2"}(Me.cmbInputType.SelectedIndex)
-        wNewRow.Item("Hinmei") = Me.txtHinmei.Text.ToString()
-        wNewRow.Item("Suuryou") = CInt(Me.numSuryou.Value)
-        wNewRow.Item("Tani") = Me.txtTani.Text
-        wNewRow.Item("Kingaku") = CInt(Me.numKingaku.Value)
-        wNewRow.Item("Tantousya") = Me.txtTantou.Text
-        wNewRow.Item("Bikou") = Me.txtBikou.Text
-        wNewRow.Item("SyoriDateTime") = Me.dtpInputDate.Value
+        wNewRow.Item("SyoriKubun") = {"1", "2"}(Me.CmbInputType.SelectedIndex)
+        wNewRow.Item("Hinmei") = Me.TxtHinmei.Text.ToString()
+        wNewRow.Item("Suuryou") = CInt(Me.NumSuryou.Value)
+        wNewRow.Item("Tani") = Me.TxtTani.Text
+        wNewRow.Item("Kingaku") = CInt(Me.NumKingaku.Value)
+        wNewRow.Item("Tantousya") = Me.TxtTantou.Text
+        wNewRow.Item("Bikou") = Me.TxtBikou.Text
+        wNewRow.Item("SyoriDateTime") = Me.DtpInputDate.Value
         wNewRow.Item("InputDateTime") = DateTime.MinValue
         wNewRow.Item("UpdateDateTime") = DateTime.MinValue
 
@@ -77,7 +77,7 @@ Public Class frmInventoryInput
 
         '' 画面を新規入力可能な状態に設定する
         Me.ClearInput(False)
-        Me.txtHinmei.Focus()
+        Me.TxtHinmei.Focus()
     End Sub
 
     ''' <summary>
@@ -85,7 +85,7 @@ Public Class frmInventoryInput
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub btnRegist_Click(sender As Object, e As EventArgs) Handles btnRegist.Click
+    Private Sub BtnRegist_Click(sender As Object, e As EventArgs) Handles BtnRegist.Click
         ' DBを更新し最新データを再度取得する
         If (fpInventoryAdapter.InsertInventoryLog(fpInventoryDataTable) > 0) Then
 
@@ -93,7 +93,7 @@ Public Class frmInventoryInput
             Me.fpInventoryDataTable = fpInventoryAdapter.FillInventoryLog()
 
             ' 在庫履歴データをとデータグリッドビューへ結びつける
-            Me.dgvInventory.DataSource = Me.fpInventoryDataTable
+            Me.DgvInventory.DataSource = Me.fpInventoryDataTable
         End If
 
     End Sub
@@ -103,7 +103,7 @@ Public Class frmInventoryInput
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
         Me.Close()
     End Sub
 
@@ -114,16 +114,16 @@ Public Class frmInventoryInput
     Private Sub ClearInput(ByVal aNewForm As Boolean)
         If (aNewForm) Then
             '' フォーム立ち上げ時のみクリアする項目
-            Me.txtTantou.Clear()
+            Me.TxtTantou.Clear()
 
         End If
 
-        Me.cmbInputType.SelectedIndex = 0
-        Me.txtHinmei.Clear()
-        Me.numSuryou.Value = 0
-        Me.numKingaku.Value = 0
-        Me.txtTani.Clear()
-        Me.txtBikou.Clear()
+        Me.CmbInputType.SelectedIndex = 0
+        Me.TxtHinmei.Clear()
+        Me.NumSuryou.Value = 0
+        Me.NumKingaku.Value = 0
+        Me.TxtTani.Clear()
+        Me.TxtBikou.Clear()
 
     End Sub
 
@@ -137,13 +137,13 @@ Public Class frmInventoryInput
         Dim wIsWarning As Boolean = False
 
         '' 各入力項目の警告メッセージと警告の有無を設定する
-        If (Me.txtTantou.Text.Trim.Length = 0) Then
+        If (Me.TxtTantou.Text.Trim.Length = 0) Then
             wSblWarningMessage.Append("・担当者が入力されていません" & vbCrLf)
             wIsWarning = True
 
         End If
 
-        If (Me.txtHinmei.Text.Trim.Length = 0) Then
+        If (Me.TxtHinmei.Text.Trim.Length = 0) Then
             wSblWarningMessage.Append("・品名が入力されていません" & vbCrLf)
             wIsWarning = True
 
