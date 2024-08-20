@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmInventoryViewer
+Partial Class FrmInventoryViewer
     Inherits System.Windows.Forms.Form
 
     'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
@@ -23,19 +23,19 @@ Partial Class frmInventoryViewer
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         SplitContainer1 = New SplitContainer()
-        cmbInputType = New ComboBox()
-        dtpInputDate = New DateTimePicker()
+        CmbInputType = New ComboBox()
+        DtpInputDate = New DateTimePicker()
         Label5 = New Label()
         Label4 = New Label()
         Label8 = New Label()
         Label2 = New Label()
         Label1 = New Label()
-        txtTantou = New TextBox()
-        txtBikou = New TextBox()
-        txtHinmei = New TextBox()
-        btnFind = New Button()
+        TxtTantou = New TextBox()
+        TxtBikou = New TextBox()
+        TxtHinmei = New TextBox()
+        BtnFind = New Button()
         SplitContainer2 = New SplitContainer()
-        dgvInventory = New DataGridView()
+        DgvInventory = New DataGridView()
         vSyoriKubun = New DataGridViewTextBoxColumn()
         vHinmei = New DataGridViewTextBoxColumn()
         vSuuryou = New DataGridViewTextBoxColumn()
@@ -44,7 +44,7 @@ Partial Class frmInventoryViewer
         vTantousya = New DataGridViewTextBoxColumn()
         vBikou = New DataGridViewTextBoxColumn()
         vSyoriDateTime = New DataGridViewTextBoxColumn()
-        btnExit = New Button()
+        BtnExit = New Button()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
@@ -53,7 +53,7 @@ Partial Class frmInventoryViewer
         SplitContainer2.Panel1.SuspendLayout()
         SplitContainer2.Panel2.SuspendLayout()
         SplitContainer2.SuspendLayout()
-        CType(dgvInventory, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DgvInventory, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' SplitContainer1
@@ -66,17 +66,17 @@ Partial Class frmInventoryViewer
         ' 
         ' SplitContainer1.Panel1
         ' 
-        SplitContainer1.Panel1.Controls.Add(cmbInputType)
-        SplitContainer1.Panel1.Controls.Add(dtpInputDate)
+        SplitContainer1.Panel1.Controls.Add(CmbInputType)
+        SplitContainer1.Panel1.Controls.Add(DtpInputDate)
         SplitContainer1.Panel1.Controls.Add(Label5)
         SplitContainer1.Panel1.Controls.Add(Label4)
         SplitContainer1.Panel1.Controls.Add(Label8)
         SplitContainer1.Panel1.Controls.Add(Label2)
         SplitContainer1.Panel1.Controls.Add(Label1)
-        SplitContainer1.Panel1.Controls.Add(txtTantou)
-        SplitContainer1.Panel1.Controls.Add(txtBikou)
-        SplitContainer1.Panel1.Controls.Add(txtHinmei)
-        SplitContainer1.Panel1.Controls.Add(btnFind)
+        SplitContainer1.Panel1.Controls.Add(TxtTantou)
+        SplitContainer1.Panel1.Controls.Add(TxtBikou)
+        SplitContainer1.Panel1.Controls.Add(TxtHinmei)
+        SplitContainer1.Panel1.Controls.Add(BtnFind)
         ' 
         ' SplitContainer1.Panel2
         ' 
@@ -85,26 +85,26 @@ Partial Class frmInventoryViewer
         SplitContainer1.SplitterDistance = 71
         SplitContainer1.TabIndex = 0
         ' 
-        ' cmbInputType
+        ' CmbInputType
         ' 
-        cmbInputType.DisplayMember = "1,2"
-        cmbInputType.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbInputType.FlatStyle = FlatStyle.System
-        cmbInputType.FormattingEnabled = True
-        cmbInputType.Items.AddRange(New Object() {"入庫", "出庫"})
-        cmbInputType.Location = New Point(67, 41)
-        cmbInputType.Name = "cmbInputType"
-        cmbInputType.Size = New Size(121, 23)
-        cmbInputType.TabIndex = 5
-        cmbInputType.ValueMember = "1,2"
+        CmbInputType.DisplayMember = "1,2"
+        CmbInputType.DropDownStyle = ComboBoxStyle.DropDownList
+        CmbInputType.FlatStyle = FlatStyle.System
+        CmbInputType.FormattingEnabled = True
+        CmbInputType.Items.AddRange(New Object() {"入庫", "出庫"})
+        CmbInputType.Location = New Point(67, 41)
+        CmbInputType.Name = "CmbInputType"
+        CmbInputType.Size = New Size(121, 23)
+        CmbInputType.TabIndex = 5
+        CmbInputType.ValueMember = "1,2"
         ' 
-        ' dtpInputDate
+        ' DtpInputDate
         ' 
-        dtpInputDate.Format = DateTimePickerFormat.Short
-        dtpInputDate.Location = New Point(243, 12)
-        dtpInputDate.Name = "dtpInputDate"
-        dtpInputDate.Size = New Size(100, 23)
-        dtpInputDate.TabIndex = 3
+        DtpInputDate.Format = DateTimePickerFormat.Short
+        DtpInputDate.Location = New Point(243, 12)
+        DtpInputDate.Name = "DtpInputDate"
+        DtpInputDate.Size = New Size(100, 23)
+        DtpInputDate.TabIndex = 3
         ' 
         ' Label5
         ' 
@@ -151,35 +151,35 @@ Partial Class frmInventoryViewer
         Label1.TabIndex = 0
         Label1.Text = "担当者"
         ' 
-        ' txtTantou
+        ' TxtTantou
         ' 
-        txtTantou.Location = New Point(67, 12)
-        txtTantou.Name = "txtTantou"
-        txtTantou.Size = New Size(100, 23)
-        txtTantou.TabIndex = 1
+        TxtTantou.Location = New Point(67, 12)
+        TxtTantou.Name = "TxtTantou"
+        TxtTantou.Size = New Size(100, 23)
+        TxtTantou.TabIndex = 1
         ' 
-        ' txtBikou
+        ' TxtBikou
         ' 
-        txtBikou.Location = New Point(489, 41)
-        txtBikou.Name = "txtBikou"
-        txtBikou.Size = New Size(199, 23)
-        txtBikou.TabIndex = 9
+        TxtBikou.Location = New Point(489, 41)
+        TxtBikou.Name = "TxtBikou"
+        TxtBikou.Size = New Size(199, 23)
+        TxtBikou.TabIndex = 9
         ' 
-        ' txtHinmei
+        ' TxtHinmei
         ' 
-        txtHinmei.Location = New Point(243, 41)
-        txtHinmei.Name = "txtHinmei"
-        txtHinmei.Size = New Size(199, 23)
-        txtHinmei.TabIndex = 7
+        TxtHinmei.Location = New Point(243, 41)
+        TxtHinmei.Name = "TxtHinmei"
+        TxtHinmei.Size = New Size(199, 23)
+        TxtHinmei.TabIndex = 7
         ' 
-        ' btnFind
+        ' BtnFind
         ' 
-        btnFind.Location = New Point(699, 32)
-        btnFind.Name = "btnFind"
-        btnFind.Size = New Size(145, 36)
-        btnFind.TabIndex = 10
-        btnFind.Text = "検索"
-        btnFind.UseVisualStyleBackColor = True
+        BtnFind.Location = New Point(699, 32)
+        BtnFind.Name = "BtnFind"
+        BtnFind.Size = New Size(145, 36)
+        BtnFind.TabIndex = 10
+        BtnFind.Text = "検索"
+        BtnFind.UseVisualStyleBackColor = True
         ' 
         ' SplitContainer2
         ' 
@@ -191,27 +191,27 @@ Partial Class frmInventoryViewer
         ' 
         ' SplitContainer2.Panel1
         ' 
-        SplitContainer2.Panel1.Controls.Add(dgvInventory)
+        SplitContainer2.Panel1.Controls.Add(DgvInventory)
         ' 
         ' SplitContainer2.Panel2
         ' 
-        SplitContainer2.Panel2.Controls.Add(btnExit)
+        SplitContainer2.Panel2.Controls.Add(BtnExit)
         SplitContainer2.Panel2MinSize = 38
         SplitContainer2.Size = New Size(847, 537)
         SplitContainer2.SplitterDistance = 485
         SplitContainer2.TabIndex = 0
         ' 
-        ' dgvInventory
+        ' DgvInventory
         ' 
-        dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvInventory.Columns.AddRange(New DataGridViewColumn() {vSyoriKubun, vHinmei, vSuuryou, vTani, vKingaku, vTantousya, vBikou, vSyoriDateTime})
-        dgvInventory.Dock = DockStyle.Fill
-        dgvInventory.Location = New Point(0, 0)
-        dgvInventory.Name = "dgvInventory"
-        dgvInventory.ReadOnly = True
-        dgvInventory.RowTemplate.Height = 25
-        dgvInventory.Size = New Size(847, 485)
-        dgvInventory.TabIndex = 0
+        DgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DgvInventory.Columns.AddRange(New DataGridViewColumn() {vSyoriKubun, vHinmei, vSuuryou, vTani, vKingaku, vTantousya, vBikou, vSyoriDateTime})
+        DgvInventory.Dock = DockStyle.Fill
+        DgvInventory.Location = New Point(0, 0)
+        DgvInventory.Name = "DgvInventory"
+        DgvInventory.ReadOnly = True
+        DgvInventory.RowTemplate.Height = 25
+        DgvInventory.Size = New Size(847, 485)
+        DgvInventory.TabIndex = 0
         ' 
         ' vSyoriKubun
         ' 
@@ -261,23 +261,23 @@ Partial Class frmInventoryViewer
         vSyoriDateTime.Name = "vSyoriDateTime"
         vSyoriDateTime.ReadOnly = True
         ' 
-        ' btnExit
+        ' BtnExit
         ' 
-        btnExit.Dock = DockStyle.Fill
-        btnExit.Location = New Point(0, 0)
-        btnExit.Name = "btnExit"
-        btnExit.Size = New Size(847, 48)
-        btnExit.TabIndex = 1
-        btnExit.Text = "終了"
-        btnExit.UseVisualStyleBackColor = True
+        BtnExit.Dock = DockStyle.Fill
+        BtnExit.Location = New Point(0, 0)
+        BtnExit.Name = "BtnExit"
+        BtnExit.Size = New Size(847, 48)
+        BtnExit.TabIndex = 1
+        BtnExit.Text = "終了"
+        BtnExit.UseVisualStyleBackColor = True
         ' 
-        ' frmInventoryViewer
+        ' FrmInventoryViewer
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(847, 612)
         Controls.Add(SplitContainer1)
-        Name = "frmInventoryViewer"
+        Name = "FrmInventoryViewer"
         Text = "在庫確認画面"
         SplitContainer1.Panel1.ResumeLayout(False)
         SplitContainer1.Panel1.PerformLayout()
@@ -288,25 +288,25 @@ Partial Class frmInventoryViewer
         SplitContainer2.Panel2.ResumeLayout(False)
         CType(SplitContainer2, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer2.ResumeLayout(False)
-        CType(dgvInventory, ComponentModel.ISupportInitialize).EndInit()
+        CType(DgvInventory, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents SplitContainer2 As SplitContainer
-    Friend WithEvents btnExit As Button
-    Friend WithEvents dgvInventory As DataGridView
+    Friend WithEvents BtnExit As Button
+    Friend WithEvents DgvInventory As DataGridView
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtHinmei As TextBox
-    Friend WithEvents btnFind As Button
-    Friend WithEvents dtpInputDate As DateTimePicker
-    Friend WithEvents cmbInputType As ComboBox
+    Friend WithEvents TxtHinmei As TextBox
+    Friend WithEvents BtnFind As Button
+    Friend WithEvents DtpInputDate As DateTimePicker
+    Friend WithEvents CmbInputType As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtTantou As TextBox
+    Friend WithEvents TxtTantou As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtBikou As TextBox
+    Friend WithEvents TxtBikou As TextBox
     Friend WithEvents vSyoriKubun As DataGridViewTextBoxColumn
     Friend WithEvents vHinmei As DataGridViewTextBoxColumn
     Friend WithEvents vSuuryou As DataGridViewTextBoxColumn

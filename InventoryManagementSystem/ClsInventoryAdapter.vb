@@ -2,7 +2,7 @@
 Imports System.Transactions
 Imports Microsoft.Data.SqlClient
 
-Public Class clsInventoryAdapter
+Public Class ClsInventoryAdapter
 
     Private mConnectionStringBuilder As SqlConnectionStringBuilder
 

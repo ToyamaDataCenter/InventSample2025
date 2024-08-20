@@ -1,12 +1,12 @@
-﻿Public Class frmMenu
-    Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class FrmMenu
+    Private Sub FrmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Enabled = False
 
-        frmInventoryInput.ShowDialog()
+        FrmInventoryInput.ShowDialog()
 
         Me.Enabled = True
 
