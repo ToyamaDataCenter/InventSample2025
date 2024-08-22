@@ -7,17 +7,17 @@ Public Class ClsInventoryAdapter
     Private mConnectionStringBuilder As SqlConnectionStringBuilder
 
     Public Sub New()
-        ' 本来はパスワードの暗号化、接続文字列をプログラム外に持つ等行う
-        Me.mConnectionStringBuilder =
+    ' 本来はパスワードの暗号化、接続文字列をプログラム外に持つ等行う
+    Me.mConnectionStringBuilder =
             New SqlConnectionStringBuilder With {
-                .DataSource = "MININT-69O6N7N",
-                .UserID = "sa",
-                .Password = "tdc4331844",
+                .DataSource = "tdc-internship01.database.windows.net",
+                .UserID = "tdc",
+                .Password = "se-1844@",
                 .InitialCatalog = "InventoryDataBase",
                 .PersistSecurityInfo = True,
                 .TrustServerCertificate = True
             }
-    End Sub
+  End Sub
 
     Private ReadOnly Property ConnectionString As String
         Get
